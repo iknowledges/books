@@ -1,0 +1,6 @@
+* [Chapter 3: Multiple Regression Analysis: Estimation](Economics/IntroductoryEconometrics/Chapter3.md)
+* [Chapter 4. Multiple Regression Analysis: Inference](Economics/IntroductoryEconometrics/Chapter4.md)
+* [Chapter 5. Multiple Regression Analysis: OLS Asymptotics](Economics/IntroductoryEconometrics/Chapter5.md)
+* [Appendix B: Fundamentals of Probability](Economics/IntroductoryEconometrics/AppendixB.md)
+* [Appendix C: Fundamentals of Mathematical Statistics](Economics/IntroductoryEconometrics/AppendixC.md)
+* [Appendix D: Summary of Matrix Algebra](Economics/IntroductoryEconometrics/AppendixD.md)
