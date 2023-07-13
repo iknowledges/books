@@ -86,7 +86,7 @@ cmake-gui
   - Where is the source code: /home/admin/software/opencv-3.3.0
   - Where to build the binaries: /home/admin/software/opencv-3.3.0/build
 
-![How-to-build-1](https://gitlab.com/iknowledge/BookImage/-/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-1.jpg)
+![How-to-build-1](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-1.jpg)
 
 - (2) Click on the `Configure` button, select the correct generator and click Finish:
   - Windows users: select Visual Studio 14 2015.
@@ -100,11 +100,11 @@ For the next part, you'll need to execute somewhat different commands if you're 
 
 **Windows users**: Go to the OpenCV build folder. There should be a Visual Studio 2015 Solution that you can easily execute and build OpenCV with. You can also immediately click on the Open Project button, which is right next to the Generate button on CMake. After Visual Studio is opened, you need to select Batch Build from the Visual Studio main menu. It's right under Build:
 
-![How-to-build-2](https://gitlab.com/iknowledge/BookImage/-/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-2.jpg)
+![How-to-build-2](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-2.jpg)
 
 Make sure checkboxes in the Build column are enabled for **ALL_BUILD** and **INSTALL**, as shown in the following screenshot:
 
-![How-to-build-3](https://gitlab.com/iknowledge/BookImage/-/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-3.jpg)
+![How-to-build-3](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/How-to-build-3.jpg)
 
 **For macOS and Linux users**: Switch to the Binaries folder you chose in CMake and execute the following commands:
 
