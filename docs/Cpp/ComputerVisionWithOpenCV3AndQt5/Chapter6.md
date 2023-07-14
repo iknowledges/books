@@ -2,7 +2,7 @@
 
 ## Image filtering
 
-It's important to note that all of the functions discussed in this section take a `Mat` image as an input and produce a `Mat` image of the same size and the same number of channels.
+It's important to note that all of the functions discussed in this section take a `Mat` image as an input and produce a `Mat` image of the same size and the same number of channels.（这部分讨论的所有函数都是输入一个`Mat`类型的图片，然后生成一个相同大小和相同数量通道的`Mat`图片。）
 
 1. Open the `plugin.ui` file and make sure its user interface includes the following widgets. Also, pay attention to the objectName values of the widgets. Notice that the layout of the entire PluginGui file is set to a grid layout.
 2. Set the `size Policy/Horizontal Policy` property of `borderTypeLabel` to Fixed. This will ensure that the label occupies a fixed horizontal space according to its width.
