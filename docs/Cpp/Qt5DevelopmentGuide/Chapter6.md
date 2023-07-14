@@ -29,3 +29,16 @@ QFileDialog::getOpenFileName()函数返回的是选择文件的带路径的完�
 
 若要选择打开多个文件，可使用静态函数QFileDialog::getOpenFileNames()，“打开多个文件”按钮的响应代码如下：
 
+```cpp
+void Dialog::on_btnOpenMulti_clicked()
+{ //选择多个文件
+   QString curPath=QDir::currentPath();
+   QString dlgTitle="选择多个文件"; 
+   QString filter="文本文件(*.txt);;图片文件(*.jpg *.gif);;所有文件(*.*)"; 
+   QStringList fileList=QFileDialog::getOpenFileNames(this,dlgTitle,curPath,filter);
+   for (int i=0; i<fileList.count();i++)
+      ui->plainTextEdit->appendPlainText(fileList.at(i));
+}
+```
+
+getOpenFileNames()函数的参数与getOpenFileName()一样，只是返回值是一个字符串列表，列表的每一行是一个文件。
