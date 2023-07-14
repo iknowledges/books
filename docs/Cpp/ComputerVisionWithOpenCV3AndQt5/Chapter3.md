@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-The `exec()` function of the `QApplication` class is called so that the application is entered into the main loop, and stays on until the window is closed.（调用exec函数是应用程序进入主循环，保持状态直到窗口关闭）
+The `exec()` function of the `QApplication` class is called so that the application is entered into the main loop, and stays on until the window is closed.（调用exec函数使应用程序进入主循环，保持状态直到窗口关闭）
 
 To understand how the event loop really works, try removing the last line and see what happens.（删除最后一行，窗口会闪一下就关闭了。）
 
