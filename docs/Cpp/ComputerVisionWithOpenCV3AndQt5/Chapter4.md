@@ -66,9 +66,7 @@ As seen in the following image, the top-left corner of the image is considered t
 
 The top-right corner of the image has the location value of (width is 1,0).
 
-The right-bottom corner of the image will have the location value of (width-1, height-1)
-
-![Constructors-properties-and-methods-1](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/Constructors-properties-and-methods-1.png)
+The right-bottom corner of the image will have the location value of (width-1, height-1).
 
 If for any reason you want to copy a Mat class into a new (and completely independent) Mat, then you need to use the `clone` function, as seen in this example:
 
@@ -98,10 +96,6 @@ Mat centralColumns = image.colRange(image.cols/2 - 10, image.cols/2 + 10);
 centralRows = Scalar(0);
 centralColumns = Scalar(0);
 ```
-
-And here's the result, executed on our test image:
-
-![Constructors-properties-and-methods-2](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/Constructors-properties-and-methods-2.png)
 
 When you extract an ROI using the methods mentioned previously, and store it in a new Mat class, you can use the `locateROI` function to get the size of the parent image and the top-left position of the ROI inside the parent image. Here's an example:
 
@@ -148,9 +142,7 @@ image.forEach<Vec3b>([](Vec3b &p, const int *)
 });
 ```
 
-Here is the resulting darker image that would be the same for all of the three preceding codes:
-
-![Constructors-properties-and-methods-3](https://github.com/iknowledges/BookImage/raw/main/ComputerVisionWithOpenCV3AndQt5/Constructors-properties-and-methods-3.png)
+Here is the resulting darker image that would be the same for all of the three preceding codes.
 
 It's also important to note that all standard arithmetic operations are also possible with the Mat class.
 
