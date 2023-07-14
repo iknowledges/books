@@ -66,40 +66,37 @@ unix: macx{
 #include <QApplication>
 int main(int argc, char *argv[])
 {
-QApplication a(argc, argv);MainWindow w;
-w.show();
-return a.exec();
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
 ```
 
-The first two lines are used to include our current `mainwindow.h` header and QApplication header files. The `QApplication` class is the main class responsible for controlling the application's control flow, settings, and so on.
+The `exec()` function of the `QApplication` class is called so that the application is entered into the main loop, and stays on until the window is closed.（调用exec函数是应用程序进入主循环，保持状态直到窗口关闭）
 
-Finally, the `exec()` function of the `QApplication` class is called so that the application is entered into the main loop, and stays on until the window is closed.
-
-To understand how the event loop really works, try removing the last line and see what happens.
+To understand how the event loop really works, try removing the last line and see what happens.（删除最后一行，窗口会闪一下就关闭了。）
 
 ### Meta-Object Compiler (moc)
 
-Before your Qt code is actually passed on to the real C++ compiler, the `moc` tool processes your class headers to generate the code required for enabling the Qt specific capabilities. You can find these generated source files in the Build folder. Their name starts with `moc_`.
+Before your Qt code is actually passed on to the real C++ compiler, the `moc` tool processes your class headers to generate the code required for enabling the Qt specific capabilities. You can find these generated source files in the Build folder. Their name starts with `moc_`.（Qt代码在被C++编译器处理之前，`moc`编译器会处理头文件生成具有Qt特定功能的代码，这些代码可以在编译目录下以`moc_`开头的文件中找到。）
 
-What is worth mentioning here is that `moc` searches for all header files with Qt class definitions that contain the `Q_OBJECT` macro. This macro must always be included in Qt classes that want support for signals, slots, and other Qt supported features.
+What is worth mentioning here is that `moc` searches for all header files with Qt class definitions that contain the `Q_OBJECT` macro. This macro must always be included in Qt classes that want support for signals, slots, and other Qt supported features.（moc编译器会搜索所有包含Q_OBJECT宏的头文件。）
 
 Here's what we had in our `mainwindow.h` file:
 
-```
-...
+```cpp
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-...
 ```
 
 ### User Interface Compiler (uic)
 
-Whenever a Qt application with a user interface is built, a Qt internal tool called `uic` is executed to process and convert the `*.ui` files into classes and source code usable in C++ code.
+Whenever a Qt application with a user interface is built, a Qt internal tool called `uic` is executed to process and convert the `*.ui` files into classes and source code usable in C++ code.（`uic`编译器会将*.ui文件转换成C++类和源代码。）
 
 In our case, `mainwindow.h` is converted to the `ui_mainwindow.h` file, which again, you can find in the `Build` folder.
 
@@ -124,4 +121,4 @@ If you take a look at the contents of the `ui_mainwindow.h` file, you'll notice 
 
 ## Qt Resource System
 
-Qt supports resource management using the `*.qrc` files (Resource Collection Files), which are simply XML files that include information about resource files that need to be included in our applications.
+Qt supports resource management using the `*.qrc` files (Resource Collection Files), which are simply XML files that include information about resource files that need to be included in our applications.（`*.qrc`文件是一个包含资源文件信息的XML文件。）
